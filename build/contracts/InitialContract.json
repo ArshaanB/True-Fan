@@ -1,0 +1,222 @@
+{
+  "contractName": "InitialContract",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "meaningOfLife",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"meaningOfLife\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/arshaan/Desktop/development/crypto/true-fan/contracts/InitialContract.sol\":\"InitialContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/arshaan/Desktop/development/crypto/true-fan/contracts/InitialContract.sol\":{\"keccak256\":\"0x816fd66bf558d5339de157123ee1c18e7928ea4b0065b67efa86dbab051619df\",\"urls\":[\"bzz-raw://a60a9a93230551d7194083bb0ca778ccc4e7c6f032dfc2f265e7fe455fb6d8cc\",\"dweb:/ipfs/QmY5WAa35ekLoqFbfA2s9XyWbyaTWTLgWn2VwWpFafjGkR\"]}},\"version\":1}",
+  "bytecode": "0x6080604052602a600055348015601457600080fd5b506084806100236000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80635353455a14602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b6000548156fea265627a7a72315820a11edee7b9204be00a6dc282cc119c2cf69ac72c04b3463807c8f1ab5a9d9a2264736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80635353455a14602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b6000548156fea265627a7a72315820a11edee7b9204be00a6dc282cc119c2cf69ac72c04b3463807c8f1ab5a9d9a2264736f6c63430005100032",
+  "sourceMap": "34:62:0:-;;;91:2;63:30;;34:62;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:62:0;;;;;;;",
+  "deployedSourceMap": "34:62:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:62:0;;;;;;;;;;;;;;;;;;;63:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.8.0;\n\ncontract InitialContract {\n  uint public meaningOfLife = 42;\n}",
+  "sourcePath": "/Users/arshaan/Desktop/development/crypto/true-fan/contracts/InitialContract.sol",
+  "ast": {
+    "absolutePath": "/Users/arshaan/Desktop/development/crypto/true-fan/contracts/InitialContract.sol",
+    "exportedSymbols": {
+      "InitialContract": [
+        5
+      ]
+    },
+    "id": 6,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "InitialContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "meaningOfLife",
+            "nodeType": "VariableDeclaration",
+            "scope": 5,
+            "src": "63:30:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "63:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3432",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "91:2:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_42_by_1",
+                "typeString": "int_const 42"
+              },
+              "value": "42"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 6,
+        "src": "34:62:0"
+      }
+    ],
+    "src": "0:96:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/arshaan/Desktop/development/crypto/true-fan/contracts/InitialContract.sol",
+    "exportedSymbols": {
+      "InitialContract": [
+        5
+      ]
+    },
+    "id": 6,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "InitialContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "meaningOfLife",
+            "nodeType": "VariableDeclaration",
+            "scope": 5,
+            "src": "63:30:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "63:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3432",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "91:2:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_42_by_1",
+                "typeString": "int_const 42"
+              },
+              "value": "42"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 6,
+        "src": "34:62:0"
+      }
+    ],
+    "src": "0:96:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x2629e85eeE40fE4D8E8D7247e0180c98d98f6ff6",
+      "transactionHash": "0x90684a40a27366648b6dd28b7bf7c9d63ffabaa08b679a3bc2a7994f5c20e2e3"
+    }
+  },
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-18T22:35:03.508Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
