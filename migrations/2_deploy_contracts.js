@@ -1,5 +1,5 @@
-const InitialContract = artifacts.require("InitialContract");
+const TrueFanContract = artifacts.require("TrueFanContract");
 
 module.exports = function (deployer) {
-  deployer.deploy(InitialContract);
+  deployer.deploy(TrueFanContract);
 };
