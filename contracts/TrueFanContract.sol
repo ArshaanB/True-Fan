@@ -3,16 +3,16 @@ pragma solidity >=0.4.22 <0.8.0;
 contract TrueFanContract {
     struct Creator {
         string displayPictureURL;
-        uint creatorAddress;
+        uint256 creatorAddress;
     }
 
     struct Subscription {
         string creatorUsername;
-        uint lastPayment;
+        uint256 lastPayment;
     }
 
     mapping(string => Creator) public usernameToCreator;
-    mapping(uint => Subscription[]) public addressToSubscriptions;
+    mapping(address => Subscription[]) public addressToSubscriptions;
 
     function registerCreator(
         string memory _username,
@@ -25,7 +25,7 @@ contract TrueFanContract {
         );
         Creator memory newCreator = Creator(
             _displayPictureURL,
-            uint(msg.sender)
+            uint256(msg.sender)
         );
         usernameToCreator[_username] = newCreator;
     }
@@ -38,9 +38,9 @@ contract TrueFanContract {
         );
 
         Subscription memory foundSubscription;
-        Subscription[] memory allSubscriptions = addressToSubscriptions[uint(msg
-            .sender)];
-        for (uint i = 0; i < allSubscriptions.length; i++) {
+        Subscription[] memory allSubscriptions = addressToSubscriptions[msg
+            .sender];
+        for (uint256 i = 0; i < allSubscriptions.length; i++) {
             Subscription memory currSub = allSubscriptions[i];
             if (
                 keccak256(abi.encodePacked(currSub.creatorUsername)) ==
@@ -53,7 +53,7 @@ contract TrueFanContract {
 
         if (bytes(foundSubscription.creatorUsername).length == 0) {
             foundSubscription = Subscription(_creatorUsername, block.timestamp);
-            addressToSubscriptions[uint(msg.sender)].push(foundSubscription);
+            addressToSubscriptions[msg.sender].push(foundSubscription);
         }
     }
 }

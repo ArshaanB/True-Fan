@@ -46,9 +46,17 @@ contract("TrueFanContract", (accounts) => {
 
   it("should add a new subscription", async () => {
     const TrueFanContractInstance = await TrueFanContract.deployed();
+    await TrueFanContractInstance.registerCreator(names[0], URLs[0], {
+      from: accounts[0],
+    });
 
-    console.log(
-      await TrueFanContractInstance.addressToSubscriptions(accounts[0])
-    );
+    await TrueFanContractInstance.purchaseSubscription(names[0], {
+      from: accounts[1],
+    });
+
+    expect(
+      (await TrueFanContractInstance.addressToSubscriptions(accounts[1], 0))
+        .creatorUsername
+    ).to.equal(names[0]);
   });
 });
