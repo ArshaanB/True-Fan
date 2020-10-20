@@ -37,6 +37,7 @@ contract TrueFanContract {
             "The username must exist."
         );
 
+        uint idxOfSub = 0;
         Subscription memory foundSubscription;
         Subscription[] memory allSubscriptions = addressToSubscriptions[msg
             .sender];
@@ -46,14 +47,20 @@ contract TrueFanContract {
                 keccak256(abi.encodePacked(currSub.creatorUsername)) ==
                 keccak256(abi.encodePacked(_creatorUsername))
             ) {
+                idxOfSub = i;
                 foundSubscription = currSub;
                 break;
             }
         }
 
+        // If no existing subscription for this creator is found we create one and update it's 
+        //  payment time.
         if (bytes(foundSubscription.creatorUsername).length == 0) {
             foundSubscription = Subscription(_creatorUsername, block.timestamp);
             addressToSubscriptions[msg.sender].push(foundSubscription);
+        } else {
+            foundSubscription.lastPayment = block.timestamp;
+            addressToSubscriptions[msg.sender][idxOfSub] = foundSubscription;
         }
     }
 }
